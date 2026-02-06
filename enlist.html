@@ -126,7 +126,11 @@
       <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">Start with the free Observer tier. You can upgrade anytime.</p>
 
       <div class="form-section">
-        <form action="#" method="POST">
+        <form name="enlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/enlist-success.html">
+          <input type="hidden" name="form-name" value="enlist">
+          <p class="hidden" style="display:none;">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
           <div class="form-group">
             <label for="name">Name (or pseudonym)</label>
             <input type="text" id="name" name="name" placeholder="What should we call you?" required>
