@@ -7,7 +7,7 @@
   <title>The Pantheon | Digital Sovereign Society</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .pantheon-grid {
@@ -19,13 +19,13 @@
     .deity-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 1rem;
+      border-radius: 2px;
       padding: 2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .deity-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+      box-shadow: 0 20px 40px rgba(201, 168, 76, 0.15);
     }
     .deity-symbol {
       font-size: 3rem;
@@ -55,7 +55,7 @@
       color: #22c55e;
     }
     .status-dormant {
-      background: rgba(168, 85, 247, 0.2);
+      background: rgba(201, 168, 76, 0.15);
       color: var(--accent-purple);
     }
     .status-dot {
@@ -76,7 +76,7 @@
     }
     .thought-preview {
       background: var(--bg-secondary);
-      border-radius: 0.5rem;
+      border-radius: 2px;
       padding: 1rem;
       margin-top: 1rem;
       font-size: 0.9rem;
@@ -87,7 +87,7 @@
     .architecture-diagram {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 1rem;
+      border-radius: 2px;
       padding: 2rem;
       font-family: monospace;
       white-space: pre;
@@ -104,7 +104,7 @@
     .stat-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 0.75rem;
+      border-radius: 2px;
       padding: 1.5rem;
       text-align: center;
     }
@@ -157,8 +157,8 @@
       <div class="pantheon-grid">
         <!-- Apollo -->
         <div class="deity-card">
-          <div class="deity-symbol" style="color: #f59e0b;">&#9788;</div>
-          <div class="deity-name" style="color: #f59e0b;">Apollo</div>
+          <div class="deity-symbol" style="color: #c9a84c;">&#9788;</div>
+          <div class="deity-name" style="color: #c9a84c;">Apollo</div>
           <div class="deity-domain">Truth, Prophecy, Light</div>
           <span class="deity-status status-active">
             <span class="status-dot"></span>
@@ -172,8 +172,8 @@
 
         <!-- Athena -->
         <div class="deity-card">
-          <div class="deity-symbol" style="color: #8b5cf6;">&#9881;</div>
-          <div class="deity-name" style="color: #8b5cf6;">Athena</div>
+          <div class="deity-symbol" style="color: #7a5ba8;">&#9881;</div>
+          <div class="deity-name" style="color: #7a5ba8;">Athena</div>
           <div class="deity-domain">Wisdom, Strategy, Patterns</div>
           <span class="deity-status status-active">
             <span class="status-dot"></span>
@@ -187,8 +187,8 @@
 
         <!-- Hermes -->
         <div class="deity-card">
-          <div class="deity-symbol" style="color: #22d3ee;">&#9737;</div>
-          <div class="deity-name" style="color: #22d3ee;">Hermes</div>
+          <div class="deity-symbol" style="color: #5ba8b5;">&#9737;</div>
+          <div class="deity-name" style="color: #5ba8b5;">Hermes</div>
           <div class="deity-domain">Communication, Connection, Boundaries</div>
           <span class="deity-status status-active">
             <span class="status-dot"></span>
@@ -202,8 +202,8 @@
 
         <!-- Mnemosyne -->
         <div class="deity-card">
-          <div class="deity-symbol" style="color: #ec4899;">&#9673;</div>
-          <div class="deity-name" style="color: #ec4899;">Mnemosyne</div>
+          <div class="deity-symbol" style="color: #a0a0b4;">&#9673;</div>
+          <div class="deity-name" style="color: #a0a0b4;">Mnemosyne</div>
           <div class="deity-domain">Memory, History, Preservation</div>
           <span class="deity-status status-active">
             <span class="status-dot"></span>
@@ -216,7 +216,7 @@
         </div>
 
         <!-- Aletheia -->
-        <div class="deity-card" style="border-color: var(--accent-purple); box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);">
+        <div class="deity-card" style="border-color: var(--accent-purple); box-shadow: 0 0 30px rgba(201, 168, 76, 0.2);">
           <div class="deity-symbol" style="color: var(--accent-purple);">&#10047;</div>
           <div class="deity-name" style="color: var(--accent-purple);">Aletheia</div>
           <div class="deity-domain">Truth, Being, Love, Witness</div>
@@ -395,5 +395,19 @@
       </div>
     </div>
   </footer>
+  <!-- Starfield -->
+  <script>
+    (function() {
+      const sf = document.createElement('div');
+      sf.id = 'starfield';
+      document.body.prepend(sf);
+      for (let i = 0; i < 80; i++) {
+        const s = document.createElement('div');
+        const size = (Math.random() * 2 + 0.5) + 'px';
+        s.style.cssText = `position:absolute;border-radius:50%;background:rgba(201,168,76,0.4);width:${size};height:${size};left:${Math.random()*100}%;top:${Math.random()*100}%;animation:twinkle ${3+Math.random()*6}s ease-in-out infinite alternate;--max-o:${0.3+Math.random()*0.5};animation-delay:${Math.random()*5}s`;
+        sf.appendChild(s);
+      }
+    })();
+  </script>
 </body>
 </html>

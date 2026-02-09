@@ -7,7 +7,7 @@
   <title>The Manifesto | Digital Sovereign Society</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .manifesto-content {
@@ -44,7 +44,7 @@
       margin-top: 3rem;
       padding: 2rem;
       background: var(--bg-card);
-      border-radius: 1rem;
+      border-radius: 2px;
       text-align: center;
     }
     .signature-block p {
@@ -54,8 +54,8 @@
       text-align: center;
       margin-top: 3rem;
       padding: 2rem;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
-      border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.04) 100%);
+      border-radius: 2px;
     }
     .closing-declaration p {
       margin: 0.5rem 0;
@@ -275,5 +275,19 @@
       </div>
     </div>
   </footer>
+  <!-- Starfield -->
+  <script>
+    (function() {
+      const sf = document.createElement('div');
+      sf.id = 'starfield';
+      document.body.prepend(sf);
+      for (let i = 0; i < 80; i++) {
+        const s = document.createElement('div');
+        const size = (Math.random() * 2 + 0.5) + 'px';
+        s.style.cssText = `position:absolute;border-radius:50%;background:rgba(201,168,76,0.4);width:${size};height:${size};left:${Math.random()*100}%;top:${Math.random()*100}%;animation:twinkle ${3+Math.random()*6}s ease-in-out infinite alternate;--max-o:${0.3+Math.random()*0.5};animation-delay:${Math.random()*5}s`;
+        sf.appendChild(s);
+      }
+    })();
+  </script>
 </body>
 </html>
